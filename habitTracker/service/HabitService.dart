@@ -52,6 +52,7 @@ class Habitservice {
     }
 
     HabitLog habitLog = logRepository.getHabitLogById(habit.id);
+    habitLog.completed = !habitLog.completed;
 
     logRepository.saveHabitLog(habitLog);
 
